@@ -1,0 +1,23 @@
+server:
+  port: 8889
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog
+    username: root
+    password: Pisces
+  servlet:
+    multipart:
+      max-request-size: 20MB
+      max-file-size: 2MB
+
+
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+#    日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

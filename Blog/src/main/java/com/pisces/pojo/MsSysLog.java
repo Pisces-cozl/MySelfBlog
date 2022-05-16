@@ -1,0 +1,52 @@
+package com.pisces.pojo;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import java.io.Serializable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author Pisces
+ * @since 2022-04-21
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+@ApiModel(value="MsSysLog对象", description="")
+public class MsSysLog implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @TableId(value = "id", type = IdType.AUTO)
+    private Long id;
+
+    private Long createDate;
+
+    private String ip;
+
+    private String method;
+
+    private String module;
+
+    private String nickname;
+
+    private String operation;
+
+    private String params;
+
+    private Long time;
+
+    private Long userid;
+
+
+}
